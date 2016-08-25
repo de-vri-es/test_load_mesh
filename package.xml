@@ -1,0 +1,13 @@
+<package format="2">
+	<name>test_load_mesh</name>
+	<version>0.0.1</version>
+	<license>Apache v2.0</license>
+	<description>Scratchpad dor testing things.</description>
+	<maintainer email="maarten@de-vri.es">Maarten de Vries</maintainer>
+	<author email="maarten@de-vri.es">Maarten de Vries</author>
+
+	<buildtool_depend>catkin</buildtool_depend>
+	<depend>geometric_shapes</depend>
+	<depend>roscpp</depend>
+	<depend>shape_msgs</depend>
+</package>
