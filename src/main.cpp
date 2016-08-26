@@ -43,14 +43,17 @@ int main(int argc, char * * argv) {
 
 	visualization_msgs::MarkerArray markers;
 	markers.markers.push_back(loadMeshAsMarker("package://test_load_mesh/beam_z_up.dae", frame));
-	markers.markers.back().ns      = "beam_z_up.dae";
-	markers.markers.back().color.r = 1;
+	markers.markers.back().ns              = "beam_z_up.dae";
+	markers.markers.back().color.r         = 1;
+	markers.markers.back().pose.position.x = -1;
 	markers.markers.push_back(loadMeshAsMarker("package://test_load_mesh/beam_y_up.dae", frame));
-	markers.markers.back().ns      = "beam_y_up.dae";
-	markers.markers.back().color.g = 1;
+	markers.markers.back().ns              = "beam_y_up.dae";
+	markers.markers.back().color.g         = 1;
+	markers.markers.back().pose.position.x = 0;
 	markers.markers.push_back(loadMeshAsMarker("package://test_load_mesh/beam.stl", frame));
-	markers.markers.back().ns      = "beam.stl";
-	markers.markers.back().color.b = 1;
+	markers.markers.back().ns              = "beam.stl";
+	markers.markers.back().color.b         = 1;
+	markers.markers.back().pose.position.x = 1;
 
 	ros::Publisher publisher = node.advertise<visualization_msgs::MarkerArray>("markers", 1, true);
 	republish(markers, publisher);
